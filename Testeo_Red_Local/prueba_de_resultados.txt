@@ -1,0 +1,44 @@
+Iniciando prueba de red...
+Tu IP local es: 192.168.0.201
+Probando conexión con router (192.168.0.1)...
+Conexión con el router (192.168.0.1) exitosa.
+Probando conexión a 8.8.8.8...
+Conexión a 8.8.8.8 exitosa.
+Resolviendo www.google.com...
+La IP de www.google.com es: 216.58.202.68
+Obteniendo información de la red local...
+Interfaz: Conexión de área local* 1
+  Dirección IP: 169.254.4.139
+  Máscara de Subred: 255.255.0.0
+  Broadcast: None
+Interfaz: Conexión de área local* 2
+  Dirección IP: 169.254.41.155
+  Máscara de Subred: 255.255.0.0
+  Broadcast: None
+Interfaz: VMware Network Adapter VMnet1
+  Dirección IP: 192.168.242.1
+  Máscara de Subred: 255.255.255.0
+  Broadcast: None
+Interfaz: VMware Network Adapter VMnet8
+  Dirección IP: 192.168.75.1
+  Máscara de Subred: 255.255.255.0
+  Broadcast: None
+Interfaz: Wi-Fi
+  Dirección IP: 192.168.0.201
+  Máscara de Subred: 255.255.255.0
+  Broadcast: None
+Interfaz: Conexión de red Bluetooth
+  Dirección IP: 169.254.177.99
+  Máscara de Subred: 255.255.0.0
+  Broadcast: None
+Interfaz: Loopback Pseudo-Interface 1
+  Dirección IP: 127.0.0.1
+  Máscara de Subred: 255.0.0.0
+  Broadcast: None
+Escaneando puertos locales (1-1024)...
+Puerto abierto encontrado: 135
+Puerto abierto encontrado: 139
+Puerto abierto encontrado: 445
+Puerto abierto encontrado: 902
+Puerto abierto encontrado: 912
+Escaneo de puertos locales completado.
