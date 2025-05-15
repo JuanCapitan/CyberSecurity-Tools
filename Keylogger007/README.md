@@ -1,6 +1,6 @@
 # Keylogger007 – Registro de Teclas y Capturas de Pantalla
 
-> ⚠️ **Uso autorizada y ética solamente.** Este script es para auditorías de seguridad con consentimiento. No te hacemos responsable del uso indebido.
+> ⚠️ **Uso autorizada y ética solamente.** Este script es para auditorías de seguridad con consentimiento. No nos hacemos responsables del uso indebido.
 
 ---
 
