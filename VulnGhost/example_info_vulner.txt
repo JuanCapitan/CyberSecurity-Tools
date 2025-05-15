@@ -1,0 +1,719 @@
+[+] Información del sistema:
+   Sistema: Windows
+   Versión: 10.0.26100
+   Plataforma: Windows-11-10.0.26100-SP0
+   Nombre del nodo: InfernalRoot7
+
+[+] Resumen:
+   Total de softwares analizados: 10
+   Softwares con vulnerabilidades: 2
+   Softwares sin vulnerabilidades: 8
+
+[+] Detalle de vulnerabilidades:
+
+== ----------- -------------- ==
+  - CVE-2020-1625 (CVSS 6.5): The kernel memory usage represented as "temp" via 'show system virtual-memory' may constantly increase when Integrated Routing and Bridging (IRB) is configured with multiple underlay physical interfac...
+  - CVE-2020-1678 (CVSS 6.5): On Juniper Networks Junos OS and Junos OS Evolved platforms with EVPN configured, receipt of specific BGP packets causes a slow memory leak. If the memory is exhausted the rpd process might crash. If ...
+  - CVE-2021-0207 (CVSS 7.5): An improper interpretation conflict of certain data between certain software components within the Juniper Networks Junos OS devices does not allow certain traffic to pass through the device upon rece...
+  - CVE-2023-52439 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+uio: Fix use-after-free in uio_open
+
+core-1				core-2
+-------------------------------------------------------
+uio_unregister_device...
+  - CVE-2024-26605 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+PCI/ASPM: Fix deadlock when enabling ASPM
+
+A last minute revert in 6.7-final introduced a potential deadlock when
+enabling ASPM dur...
+  - CVE-2021-46921 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+locking/qrwlock: Fix ordering in queued_write_lock_slowpath()
+
+While this code is executed with the wait_lock held, a reader can
+ac...
+  - CVE-2021-47038 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+Bluetooth: avoid deadlock between hci_dev->lock and socket lock
+
+Commit eab2404ba798 ("Bluetooth: Add BT_PHY socket option") added ...
+  - CVE-2021-47041 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+nvmet-tcp: fix incorrect locking in state_change sk callback
+
+We are not changing anything in the TCP connection state so
+we should...
+  - CVE-2023-52484 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+iommu/arm-smmu-v3: Fix soft lockup triggered by arm_smmu_mm_invalidate_range
+
+When running an SVA case, the following soft lockup i...
+  - CVE-2023-52572 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+cifs: Fix UAF in cifs_demultiplex_thread()
+
+There is a UAF when xfstests on cifs:
+
+  BUG: KASAN: use-after-free in smb2_is_network_...
+  - CVE-2023-52587 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+IB/ipoib: Fix mcast list locking
+
+Releasing the `priv->lock` while iterating the `priv->multicast_list` in
+`ipoib_mcast_join_task()...
+  - CVE-2023-52489 (CVSS 4.7): In the Linux kernel, the following vulnerability has been resolved:
+
+mm/sparsemem: fix race in accessing memory_section->usage
+
+The below race is observed on a PFN which falls into the device memory
+r...
+  - CVE-2021-47128 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+bpf, lockdown, audit: Fix buggy SELinux lockdown permission checks
+
+Commit 59438b46471a ("security,lockdown,selinux: implement SELi...
+  - CVE-2023-52609 (CVSS 4.7): In the Linux kernel, the following vulnerability has been resolved:
+
+binder: fix race between mmput() and do_exit()
+
+Task A calls binder_update_page_range() to allocate and insert pages on
+a remote ad...
+  - CVE-2023-52623 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+SUNRPC: Fix a suspicious RCU usage warning
+
+I received the following warning while running cthon against an ontap
+server running pN...
+  - CVE-2023-52632 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+drm/amdkfd: Fix lock dependency warning with srcu
+
+======================================================
+WARNING: possible circula...
+  - CVE-2024-26658 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+bcachefs: grab s_umount only if snapshotting
+
+When I was testing mongodb over bcachefs with compression,
+there is a lockdep warning...
+  - CVE-2024-26725 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+dpll: fix possible deadlock during netlink dump operation
+
+Recently, I've been hitting following deadlock warning during dpll pin
+d...
+  - CVE-2024-26923 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+af_unix: Fix garbage collector racing against connect()
+
+Garbage collector does not take into account the risk of embryo getting
+en...
+  - CVE-2024-26937 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+drm/i915/gt: Reset queue_priority_hint on parking
+
+Originally, with strict in order execution, we could complete execution
+only whe...
+  - CVE-2024-26987 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+mm/memory-failure: fix deadlock when hugetlb_optimize_vmemmap is enabled
+
+When I did hard offline test with hugetlb pages, below de...
+  - CVE-2024-27010 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+net/sched: Fix mirred deadlock on device recursion
+
+When the mirred action is used on a classful egress qdisc and a packet is
+mirro...
+  - CVE-2024-27014 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+net/mlx5e: Prevent deadlock while disabling aRFS
+
+When disabling aRFS under the `priv->state_lock`, any scheduled
+aRFS works are ca...
+  - CVE-2024-27031 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+NFS: Fix nfs_netfs_issue_read() xarray locking for writeback interrupt
+
+The loop inside nfs_netfs_issue_read() currently does not d...
+  - CVE-2024-27053 (CVSS 9.1): In the Linux kernel, the following vulnerability has been resolved:
+
+wifi: wilc1000: fix RCU usage in connect path
+
+With lockdep enabled, calls to the connect function from cfg802.11 layer
+lead to the...
+  - CVE-2023-52668 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+btrfs: zoned: fix lock ordering in btrfs_zone_activate()
+
+The btrfs CI reported a lockdep warning as follows by running generic
+gen...
+  - CVE-2024-35795 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+drm/amdgpu: fix deadlock while reading mqd from debugfs
+
+An errant disk backup on my desktop got into debugfs and triggered the
+fol...
+  - CVE-2024-35892 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+net/sched: fix lockdep splat in qdisc_tree_reduce_backlog()
+
+qdisc_tree_reduce_backlog() is called with the qdisc lock held,
+not RT...
+  - CVE-2024-35959 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+net/mlx5e: Fix mlx5e_priv_init() cleanup flow
+
+When mlx5e_priv_init() fails, the cleanup flow calls mlx5e_selq_cleanup which
+calls ...
+  - CVE-2024-35979 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+raid1: fix use-after-free for original bio in raid1_write_request()
+
+r1_bio->bios[] is used to record new bios that will be issued ...
+  - CVE-2024-36003 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+ice: fix LAG and VF lock dependency in ice_reset_vf()
+
+9f74a3dfcf83 ("ice: Fix VF Reset paths when interface in a failed over
+aggre...
+  - CVE-2021-47221 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+mm/slub: actually fix freelist pointer vs redzoning
+
+It turns out that SLUB redzoning ("slub_debug=Z") checks from
+s->object_size r...
+  - CVE-2023-52757 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+smb: client: fix potential deadlock when releasing mids
+
+All release_mid() callers seem to hold a reference of @mid so there is
+no ...
+  - CVE-2023-52775 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+net/smc: avoid data corruption caused by decline
+
+We found a data corruption issue during testing of SMC-R on Redis
+applications.
+
+...
+  - CVE-2023-52881 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+tcp: do not accept ACK of bytes we never sent
+
+This patch is based on a detailed report and ideas from Yepeng Pan
+and Christian Ros...
+  - CVE-2024-36892 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+mm/slub: avoid zeroing outside-object freepointer for single free
+
+Commit 284f17ac13fe ("mm/slub: handle bulk and single object fre...
+  - CVE-2024-36928 (CVSS 4.4): In the Linux kernel, the following vulnerability has been resolved:
+
+s390/qeth: Fix kernel panic after setting hsuid
+
+Symptom:
+When the hsuid attribute is set for the first time on an IQD Layer3
+devic...
+  - CVE-2024-36979 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+net: bridge: mst: fix vlan use-after-free
+
+syzbot reported a suspicious rcu usage[1] in bridge's mst code. While
+fixing it I notice...
+  - CVE-2024-38589 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+netrom: fix possible dead-lock in nr_rt_ioctl()
+
+syzbot loves netrom, and found a possible deadlock in nr_rt_ioctl [1]
+
+Make sure w...
+  - CVE-2022-48760 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+USB: core: Fix hang in usb_kill_urb by adding memory barriers
+
+The syzbot fuzzer has identified a bug in which processes hang waiti...
+  - CVE-2024-38306 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+btrfs: protect folio::private when attaching extent buffer folios
+
+[BUG]
+Since v6.8 there are rare kernel crashes reported by vario...
+  - CVE-2024-39510 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+cachefiles: fix slab-use-after-free in cachefiles_ondemand_daemon_read()
+
+We got the following issue in a fuzz test of randomly iss...
+  - CVE-2024-40899 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+cachefiles: fix slab-use-after-free in cachefiles_ondemand_get_fd()
+
+We got the following issue in a fuzz test of randomly issuing ...
+  - CVE-2024-40900 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+cachefiles: remove requests from xarray during flushing requests
+
+Even with CACHEFILES_DEAD set, we can still read the requests, so...
+  - CVE-2022-48780 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+net/smc: Avoid overwriting the copies of clcsock callback functions
+
+The callback functions of clcsock will be saved and replaced d...
+  - CVE-2024-41050 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+cachefiles: cyclic allocation of msg_id to avoid reuse
+
+Reusing the msg_id after a maliciously completed reopen request may cause
+a...
+  - CVE-2024-41057 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+cachefiles: fix slab-use-after-free in cachefiles_withdraw_cookie()
+
+We got the following issue in our fault injection stress test:...
+  - CVE-2024-41058 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+cachefiles: fix slab-use-after-free in fscache_withdraw_volume()
+
+We got the following issue in our fault injection stress test:
+
+=...
+  - CVE-2024-43834 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+xdp: fix invalid wait context of page_pool_destroy()
+
+If the driver uses a page pool, it creates a page pool with
+page_pool_create(...
+  - CVE-2022-48931 (CVSS 4.7): In the Linux kernel, the following vulnerability has been resolved:
+
+configfs: fix a race in configfs_{,un}register_subsystem()
+
+When configfs_register_subsystem() or configfs_unregister_subsystem()
+i...
+  - CVE-2024-46830 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+KVM: x86: Acquire kvm->srcu when handling KVM_SET_VCPU_EVENTS
+
+Grab kvm->srcu when processing KVM_SET_VCPU_EVENTS, as KVM will forc...
+  - CVE-2024-47744 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+KVM: Use dedicated mutex to protect kvm_usage_count to avoid deadlock
+
+Use a dedicated mutex to guard kvm_usage_count to fix a pote...
+  - CVE-2024-49870 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+cachefiles: fix dentry leak in cachefiles_open_file()
+
+A dentry leak may be caused when a lookup cookie and a cull are concurrent:
+...
+  - CVE-2024-49885 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+mm, slub: avoid zeroing kmalloc redzone
+
+Since commit 946fa0dbf2d8 ("mm/slub: extend redzone check to extra
+allocated kmalloc space...
+  - CVE-2024-49946 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+ppp: do not assume bh is held in ppp_channel_bridge_input()
+
+Networking receive path is usually handled from BH handler.
+However, s...
+  - CVE-2024-49980 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+vrf: revert "vrf: Remove unnecessary RCU-bh critical section"
+
+This reverts commit 504fc6f4f7f681d2a03aa5f68aad549d90eab853.
+
+dev_q...
+  - CVE-2024-50044 (CVSS 3.3): In the Linux kernel, the following vulnerability has been resolved:
+
+Bluetooth: RFCOMM: FIX possible deadlock in rfcomm_sk_state_change
+
+rfcomm_sk_state_change attempts to use sock_lock so it must nev...
+  - CVE-2023-52920 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+bpf: support non-r10 register spill/fill to/from stack in precision tracking
+
+Use instruction (jump) history to record instructions...
+  - CVE-2024-50121 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+nfsd: cancel nfsd_shrinker_work using sync mode in nfs4_state_shutdown_net
+
+In the normal case, when we excute `echo 0 > /proc/fs/n...
+  - CVE-2024-50249 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+ACPI: CPPC: Make rmw_lock a raw_spin_lock
+
+The following BUG was triggered:
+
+=============================
+[ BUG: Invalid wait cont...
+  - CVE-2024-50296 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+net: hns3: fix kernel crash when uninstalling driver
+
+When the driver is uninstalled and the VF is disabled concurrently, a
+kernel ...
+  - CVE-2024-50304 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+ipv4: ip_tunnel: Fix suspicious RCU usage warning in ip_tunnel_find()
+
+The per-netns IP tunnel hash table is protected by the RTNL ...
+  - CVE-2024-53042 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+ipv4: ip_tunnel: Fix suspicious RCU usage warning in ip_tunnel_init_flow()
+
+There are code paths from which the function is called ...
+  - CVE-2024-53047 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+mptcp: init: protect sched with rcu_read_lock
+
+Enabling CONFIG_PROVE_RCU_LIST with its dependence CONFIG_RCU_EXPERT
+creates this sp...
+  - CVE-2024-53125 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+bpf: sync_linked_regs() must preserve subreg_def
+
+Range propagation must not affect subreg_def marks, otherwise the
+following examp...
+  - CVE-2024-53139 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+sctp: fix possible UAF in sctp_v6_available()
+
+A lockdep report [1] with CONFIG_PROVE_RCU_LIST=y hints
+that sctp_v6_available() is ...
+  - CVE-2024-53216 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+nfsd: release svc_expkey/svc_export with rcu_work
+
+The last reference for `cache_head` can be reduced to zero in `c_show`
+and `e_sh...
+  - CVE-2024-53218 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+f2fs: fix race in concurrent f2fs_stop_gc_thread
+
+In my test case, concurrent calls to f2fs shutdown report the following
+stack tra...
+  - CVE-2024-56592 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+bpf: Call free_htab_elem() after htab_unlock_bucket()
+
+For htab of maps, when the map is removed from the htab, it may hold the
+las...
+  - CVE-2024-56640 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+net/smc: fix LGR and link use-after-free issue
+
+We encountered a LGR/link use-after-free issue, which manifested as
+the LGR/link re...
+  - CVE-2024-56641 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+net/smc: initialize close_work early to avoid warning
+
+We encountered a warning that close_work was canceled before
+initialization....
+  - CVE-2024-56744 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+f2fs: fix to avoid potential deadlock in f2fs_record_stop_reason()
+
+syzbot reports deadlock issue of f2fs as below:
+
+==============...
+  - CVE-2024-56779 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+nfsd: fix nfs4_openowner leak when concurrent nfsd4_open occur
+
+The action force umount(umount -f) will attempt to kill all rpc_tas...
+  - CVE-2024-43098 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+i3c: Use i3cdev->desc->info instead of calling i3c_device_get_info() to avoid deadlock
+
+A deadlock may happen since the i3c_master_...
+  - CVE-2024-48875 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+btrfs: don't take dev_replace rwsem on task already holding it
+
+Running fstests btrfs/011 with MKFS_OPTIONS="-O rst" to force the u...
+  - CVE-2024-54191 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+Bluetooth: iso: Fix circular lock in iso_conn_big_sync
+
+This fixes the circular locking dependency warning below, by reworking
+iso_...
+  - CVE-2024-54460 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+Bluetooth: iso: Fix circular lock in iso_listen_bis
+
+This fixes the circular locking dependency warning below, by
+releasing the soc...
+  - CVE-2024-54683 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+netfilter: IDLETIMER: Fix for possible ABBA deadlock
+
+Deletion of the last rule referencing a given idletimer may happen at
+the sam...
+  - CVE-2024-56368 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+ring-buffer: Fix overflow in __rb_map_vma
+
+An overflow occurred when performing the following calculation:
+
+   nr_pages = ((nr_subb...
+  - CVE-2024-56788 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+net: ethernet: oa_tc6: fix tx skb race condition between reference pointers
+
+There are two skb pointers to manage tx skb's enqueued...
+  - CVE-2025-21672 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+afs: Fix merge preference rule failure condition
+
+syzbot reported a lock held when returning to userspace[1].  This is
+because if a...
+  - CVE-2025-21674 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+net/mlx5e: Fix inversion dependency warning while enabling IPsec tunnel
+
+Attempt to enable IPsec packet offload in tunnel mode in d...
+  - CVE-2025-21684 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+gpio: xilinx: Convert gpio_lock to raw spinlock
+
+irq_chip functions may be called in raw spinlock context. Therefore, we
+must also ...
+  - CVE-2021-47656 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+jffs2: fix use-after-free in jffs2_clear_xattr_subsystem
+
+When we mount a jffs2 image, assume that the first few blocks of
+the imag...
+  - CVE-2022-49079 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+btrfs: zoned: traverse devices under chunk_mutex in btrfs_can_activate_zone
+
+btrfs_can_activate_zone() can be called with the devic...
+  - CVE-2022-49207 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+bpf, sockmap: Fix memleak in sk_psock_queue_msg
+
+If tcp_bpf_sendmsg is running during a tear down operation we may enqueue
+data on ...
+  - CVE-2022-49276 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+jffs2: fix memory leak in jffs2_scan_medium
+
+If an error is returned in jffs2_scan_eraseblock() and some memory
+has been added to t...
+  - CVE-2022-49277 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+jffs2: fix memory leak in jffs2_do_mount_fs
+
+If jffs2_build_filesystem() in jffs2_do_mount_fs() returns an error,
+we can observe th...
+  - CVE-2022-49381 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+jffs2: fix memory leak in jffs2_do_fill_super
+
+If jffs2_iget() or d_make_root() in jffs2_do_fill_super() returns
+an error, we can o...
+  - CVE-2022-49383 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+watchdog: rzg2l_wdt: Fix 'BUG: Invalid wait context'
+
+This patch fixes the issue 'BUG: Invalid wait context' during restart()
+callb...
+  - CVE-2022-49409 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+ext4: fix bug_on in __es_tree_search
+
+Hulk Robot reported a BUG_ON:
+===============================================================...
+  - CVE-2022-49441 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+tty: fix deadlock caused by calling printk() under tty_port->lock
+
+pty_write() invokes kmalloc() which may invoke a normal printk()...
+  - CVE-2022-49708 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+ext4: fix bug_on ext4_mb_use_inode_pa
+
+Hulk Robot reported a BUG_ON:
+==============================================================...
+  - CVE-2025-21801 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+net: ravb: Fix missing rtnl lock in suspend/resume path
+
+Fix the suspend/resume path by ensuring the rtnl lock is held where
+requir...
+  - CVE-2025-21809 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+rxrpc, afs: Fix peer hash locking vs RCU callback
+
+In its address list, afs now retains pointers to and refs on one or more
+rxrpc_p...
+  - CVE-2025-21812 (CVSS 7.8): In the Linux kernel, the following vulnerability has been resolved:
+
+ax25: rcu protect dev->ax25_ptr
+
+syzbot found a lockdep issue [1].
+
+We should remove ax25 RTNL dependency in ax25_setsockopt()
+
+Thi...
+  - CVE-2024-58071 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+team: prevent adding a device which is already a team device lower
+
+Prevent adding a device which is already a team device lower,
+e...
+  - CVE-2025-21876 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+iommu/vt-d: Fix suspicious RCU usage
+
+Commit <d74169ceb0d2> ("iommu/vt-d: Allocate DMAR fault interrupts
+locally") moved the call t...
+  - CVE-2023-53022 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+net: enetc: avoid deadlock in enetc_tx_onestep_tstamp()
+
+This lockdep splat says it better than I could:
+
+=========================...
+  - CVE-2025-21911 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+drm/imagination: avoid deadlock on fence release
+
+Do scheduler queue fence release processing on a workqueue, rather
+than in the re...
+  - CVE-2025-21912 (CVSS 5.5): In the Linux kernel, the following vulnerability has been resolved:
+
+gpio: rcar: Use raw_spinlock to protect register access
+
+Use raw_spinlock in order to fix spurious messages about invalid context
+w...
+  - CVE-2025-21986 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+net: switchdev: Convert blocking notification chain to a raw one
+
+A blocking notification chain uses a read-write semaphore to prot...
+  - CVE-2025-22111 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+net: Remove RTNL dance for SIOCBRADDIF and SIOCBRDELIF.
+
+SIOCBRDELIF is passed to dev_ioctl() first and later forwarded to
+br_ioctl...
+  - CVE-2025-22124 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+md/md-bitmap: fix wrong bitmap_limit for clustermd when write sb
+
+In clustermd, separate write-intent-bitmaps are used for each clu...
+  - CVE-2025-38104 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+drm/amdgpu: Replace Mutex with Spinlock for RLCG register access to avoid Priority Inversion in SRIOV
+
+RLCG Register Access is a wa...
+  - CVE-2025-23141 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+KVM: x86: Acquire SRCU in KVM_GET_MP_STATE to protect guest memory accesses
+
+Acquire a lock on kvm->srcu when userspace is getting ...
+  - CVE-2025-23163 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+net: vlan: don't propagate flags on open
+
+With the device instance lock, there is now a possibility of a deadlock:
+
+[    1.211455] ...
+  - CVE-2025-37741 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+jfs: Prevent copying of nlink with value 0 from disk inode
+
+syzbot report a deadlock in diFree. [1]
+
+When calling "ioctl$LOOP_SET_S...
+  - CVE-2022-49834 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+nilfs2: fix use-after-free bug of ns_writer on remount
+
+If a nilfs2 filesystem is downgraded to read-only due to metadata
+corruptio...
+  - CVE-2023-53108 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+net/iucv: Fix size of interrupt data
+
+iucv_irq_data needs to be 4 bytes larger.
+These bytes are not used by the iucv module, but wr...
+  - CVE-2025-37824 (CVSS No asignado): In the Linux kernel, the following vulnerability has been resolved:
+
+tipc: fix NULL pointer dereference in tipc_mon_reinit_self()
+
+syzbot reported:
+
+tipc: Node number set to 1055423674
+Oops: general p...
+
+== CPUID CPU-Z 2.15 2.15 ==
+  → Sin vulnerabilidades encontradas.
+
+== Git 2.49.0 ==
+  - CVE-2025-25204 (CVSS 6.3): `gh` is GitHub’s official command line tool. Starting in version 2.49.0 and prior to version 2.67.0, under certain conditions, a bug in GitHub's Artifact Attestation cli tool `gh attestation verify` c...
+
+== Microsoft 365 - es-es 16.0.18730.20142 ==
+  → Sin vulnerabilidades encontradas.
+
+== Microsoft OneNote - es-es 16.0.18730.20142 ==
+  → Sin vulnerabilidades encontradas.
+
+== Windows Subsystem for Linux 2.4.13.0 ==
+  → Sin vulnerabilidades encontradas.
+
+== Application Verifier x64 External Package (OnecoreUAP) 10.1.22621.3233 ==
+  → Sin vulnerabilidades encontradas.
+
+== Universal CRT Tools x64 10.1.22621.3233 ==
+  → Sin vulnerabilidades encontradas.
+
+== Application Verifier x64 External Package 10.1.22000.832 ==
+  → Sin vulnerabilidades encontradas.
+
+== Microsoft Visual C++ 2022 X64 Minimum Runtime - 14.42.34438 14.42.34438 ==
+  → Sin vulnerabilidades encontradas.
+
+[+] Servicios activos:
+   System Idle Process (PID 0)
+   System (PID 4)
+   csrss.exe (PID 8)
+   Nombre no disponible (PID 140)
+   Registry (PID 184)
+   wininit.exe (PID 584)
+   smss.exe (PID 604)
+   svchost.exe (PID 984)
+   csrss.exe (PID 1000)
+   services.exe (PID 1084)
+
+[+] Puertos abiertos:
+   0.0.0.0:22
+   ::1:49669
+   0.0.0.0:49666
+   :::49668
+   0.0.0.0:902
+   0.0.0.0:445
+   :::49667
+   :::445
+   192.168.0.201:139
+   0.0.0.0:912
+   0.0.0.0:5040
+   0.0.0.0:135
+   :::49666
+   0.0.0.0:49664
+   0.0.0.0:49670
+   127.0.0.1:24830
+   0.0.0.0:49668
+   0.0.0.0:49665
+   :::49670
+   :::22
+   :::135
+   :::49665
+   :::49664
+   0.0.0.0:49667

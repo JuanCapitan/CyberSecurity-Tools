@@ -1,0 +1,3 @@
+nvd_api_key: TU_API_KEY_AQUI
+max_softwaare: 10
+output_file: info_vulner.txt
